@@ -28,7 +28,7 @@
 									fetchAllItems : function() {
 										return $http
 												.post(
-														'http://localhost:8090/firstFurious/flows/fetchAllItems/')
+														'http://localhost:8080/cherryonbottom/flows/fetchAllItems/')
 												.then(
 														function(response) {
 															return response.data;

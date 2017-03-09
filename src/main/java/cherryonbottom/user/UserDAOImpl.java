@@ -25,6 +25,11 @@ public class UserDAOImpl implements UserDAO {
 		
 		return sf.getCurrentSession().createQuery("from User u").list();
 	}
+
+	public User getuName(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 
 

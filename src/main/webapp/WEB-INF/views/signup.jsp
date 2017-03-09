@@ -70,7 +70,8 @@
         <div class="register"></div>
        <center><h3>Create Your Account</h3></center>
          
-          
+          <div class="container-fluid">
+	<div class="col-md-4 col-md-offset-4">
      
    
 <form:form role="form" action="AddUserToDB" method="post" modelAttribute="User">
@@ -118,7 +119,8 @@
               <br>
               <br>
               <input type="submit" value="Create Account" id="create-account" class="btn btn-success" ng-disabled="overAllError"/>
-          
+          </div>
+          </div>
  </form:form>
 </body>
 </html>

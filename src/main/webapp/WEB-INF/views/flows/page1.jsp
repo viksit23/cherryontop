@@ -13,7 +13,7 @@
 	
 	myApp.factory("UserService",["$http","$q",function($http,$q)
 	{
-		var target_url = 'http://localhost:8090/firstFurious/';
+		var target_url = 'http://localhost:8080/cherryonbottom/';
 		
 		return{
 			
@@ -102,7 +102,7 @@
 				 <div class="panel-body">
 				 
 					 <div class="col-md-6">
-				  	 <img
+				  	 <img 
 					ng-src="${pageContext.request.contextPath}/{{ x.ProductImage }}" height=" 80px" width="170px" class="img img-responsive img-thumbnail">
 				    </div>
 				    

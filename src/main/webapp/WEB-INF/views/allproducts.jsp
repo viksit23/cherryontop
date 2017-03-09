@@ -8,6 +8,7 @@
 <title>All Products</title>
 
 <c:import url="/head-meta"/>
+
 </head>
 <script type="text/javascript">
 
@@ -20,9 +21,11 @@ myApp.controller("myCtrl",function($scope)
 		});
 
 </script>
+
 <body>
 <c:import url="/head"/>
 <body background="resources/images/bg5.jpg"  ng-app="myApp" ng-controller="myCtrl">
+
 <%
 			if(request.isUserInRole("ROLE_ADMIN"))
 			{
@@ -35,6 +38,7 @@ myApp.controller("myCtrl",function($scope)
 <%
 				}
 		%>
+
 <div class="row">
 <div ng-repeat="cat in data">
 	<div class="col-sm-2"><span>{{cat.ProductId}}</span></div>

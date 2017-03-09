@@ -20,7 +20,7 @@
     	return {
          
     		deleteAllFromCart: function(item){
-                    return $http.post('http://localhost:8090/firstFurious/flows/deleteAllFromCart/', item)
+                    return $http.post('http://localhost:8080/cherryonbottom/flows/deleteAllFromCart/', item)
                             .then(
                                     function(response){
                                         return response.data;

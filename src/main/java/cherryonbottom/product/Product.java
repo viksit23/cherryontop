@@ -14,7 +14,7 @@ private int ProductId;
 private String ProductName;
 private String Description;
 private int Price;
-private int Quantity;
+private String Quantity;
 private String pImage;
 private String ProductCategory;
 
@@ -47,10 +47,12 @@ public int getPrice() {
 public void setPrice(int price) {
 	Price = price;
 }
-public int getQuantity() {
+
+
+public String getQuantity() {
 	return Quantity;
 }
-public void setQuantity(int quantity) {
+public void setQuantity(String quantity) {
 	Quantity = quantity;
 }
 public MultipartFile getProductFile() {
@@ -71,5 +73,6 @@ public String getProductCategory() {
 public void setProductCategory(String productCategory) {
 	ProductCategory = productCategory;
 }
+
 
 }

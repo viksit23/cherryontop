@@ -7,8 +7,13 @@
 <c:import url="/head-meta"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contact Us</title>
-</head>
-<body background="resources/images/cu.jpg">
+<style>
+body {
+    background-image: url("resources/images/cu.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+</style></head>
 <c:import url="/head"/>
 <h1><center><font face="Verdana" color="blue">Contact Us..</font></center></h1>
 <center><h3><font face="Comic sans MS"  color="Magenta">We can't wait to hear from you!</font></h3></center>

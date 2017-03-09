@@ -513,7 +513,7 @@ List<Product> list = pdao.getAllProducts();
 			
 			Product productQuantity = pdao.getProduct(Integer.parseInt(request.getParameter("ProductId")));
 			String quan = "" + productQuantity.getQuantity();
-			productQuantity.setQuantity(Integer.parseInt(quan)-qty);
+			productQuantity.setQuantity(String.valueOf(Integer.parseInt(quan)-qty));
 			pdao.update(productQuantity);
 
 		}

@@ -8,21 +8,28 @@
     <div class="navbar-header">
     
     <a class="navbar-brand" href="index">Home</a>
+    </div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
       <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-      <li><a class="navbar-brand" href="aboutus">About Us</a></li>
- <li><a class="navbar-brand" href="contactus">Contact Us</a></li>
- <li><a class="navbar-brand" href="allproducts">All Products</a>
+      <li><a href="aboutus">About Us</a></li>
+ <li><a href="contactus">Contact Us</a></li>
+ <li><a href="allproducts">All Products</a></li>
  
  <%
 	if (request.isUserInRole("ROLE_ADMIN")) {
 %>
  
- <li><a class="navbar-brand" href="allcategories">Categories</a></li>
-  </ul>  
-    <%
+ <li><a  href="allcategories">Categories</a></li>
+  <%
 	}
     %>
+  </ul>  
+   
     <ul class="nav navbar-nav navbar-right">
     <c:choose>
     
@@ -40,8 +47,8 @@
 					}
 				%>
 					
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span>Welcome ${pageContext.request.userPrincipal.name }</a></li>
-      <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-user"></span>Welcome ${pageContext.request.userPrincipal.name }</a></li>
+    <li><a href="logout"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li> 
     
 				
   </c:when>
@@ -57,7 +64,7 @@
     		
     	</c:choose>
     </ul>
-  
-        </button>
+ 
+  </div>
   </div>
 </nav>

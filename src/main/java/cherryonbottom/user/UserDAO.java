@@ -8,4 +8,6 @@ public interface UserDAO
 	public void insertUser(User u);
 	
 	public List<User> getAllUsers();
+
+	public User getuName(String username);
 }
