@@ -25,12 +25,14 @@ myApp.controller("myCtrl",function($scope)
 <body>
 <c:import url="/head"/>
 <body background="resources/images/nb1.jpg"  ng-app="myApp" ng-controller="myCtrl">
-
-<%
+		<div class="container">
+		<h3><b>ALL PRODUCTS</b></h3>
+		<hr/>
+		<%
 			if(request.isUserInRole("ROLE_ADMIN"))
 			{
 		%>
-<div class="container">
+
 <div class="col-lg-12">
 <a href="${pageContext.request.contextPath}/addproduct" align="left" class="btn btn-danger">Add Product</a> 
 
@@ -61,21 +63,20 @@ myApp.controller("myCtrl",function($scope)
 	<div class="col-sm-2"><span>{{cat.ProductName}}</span></div>
 	<div class="col-sm-1"><span>{{cat.ProductQuantity}}</span></div>
 		<div class="panel-body">
-			<div class="col-md-12">
+			<div class="col-md-2">
 			
-				<img class="img-rounded" align="right" ng-src="${pageContext.request.contextPath}/resources/images/image_{{ cat.ProductId }}.jpg" height=" 100px" width="200px">
+				<img class="img-rounded" align="right" ng-src="${pageContext.request.contextPath}/resources/images/image_{{ cat.ProductId }}.jpg" height=" 50px" width="100px">
 
 				</div></div>
-					
-		
 					
 	<%
 						if(request.isUserInRole("ROLE_USER")){
 					%>
 				<div class="container" align="center">
-				<div class="col-md-2" align="center" style="margin-top:10px;">
+				<div class="col-md-2 col-md-offset-9" align="center" style="margin-top:10px;">
 					<a href="${pageContext.request.contextPath}/view/{{cat.ProductId}}" class="btn btn-warning btn-block btn-xs">View Product</a>
 					</div></div>
+					<hr>
 					<%} %>
 	
 	<%
@@ -96,7 +97,7 @@ myApp.controller("myCtrl",function($scope)
 	        
 	<input type="submit" value="Edit">
 	</form>
-	</div> 
+	</div> 	<hr>
 	<%
 						}
 %>
@@ -125,5 +126,8 @@ myApp.controller("myCtrl",function($scope)
 <li>Coconut Cake</li>
 <li>Ice Cream Cake</li>
 <li>Snowball Cake</li>
+</ul>
+</div>
+
 </body>
 </html>

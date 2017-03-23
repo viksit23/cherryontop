@@ -123,6 +123,7 @@ public class RestController {
 		
 		JSONArray jarr = new JSONArray();
 		
+		System.out.println("Logged In USer Name: "+username);
 		if( username != null )
 		{
 			User u = udao.getuName(username);

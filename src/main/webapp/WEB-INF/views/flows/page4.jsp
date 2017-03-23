@@ -56,7 +56,7 @@
 <h3>ThankYou</h3> 
 <h5>Have a nice Day</h5>
 <br><br>
-<a href="${pageContext.request.contextPath}/allProducts"
+<a href="${pageContext.request.contextPath}/allproducts"
 			class="btn btn-warning  btn pull-center">Continue Shopping</a>
 </center>
 </div>

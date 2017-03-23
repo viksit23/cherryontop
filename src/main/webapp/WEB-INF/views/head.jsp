@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -6,8 +8,11 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-    
-    <a class="navbar-brand" href="index">Home</a>
+    <div>
+				<a class="navbar-brand" href="${pageContext.request.contextPath}/index" > <img src="${pageContext.request.contextPath}/resources/images/logo1.png"
+				alt="logo" width="40" height="30"></a>
+    </div>
+   <%--  <a class="navbar-brand" href="${pageContext.request.contextPath}/index">Home</a> --%>
     </div>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -16,9 +21,10 @@
       </button>
       <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-      <li><a href="aboutus">About Us</a></li>
- <li><a href="contactus">Contact Us</a></li>
- <li><a href="allproducts">All Products</a></li>
+      <li><a href="${pageContext.request.contextPath}/index">Home</a></li>
+      <li><a href="${pageContext.request.contextPath}/aboutus">About Us</a></li>
+ <li><a href="${pageContext.request.contextPath}/contactus">Contact Us</a></li>
+ <li><a href="${pageContext.request.contextPath}/allproducts">All Products</a></li>
  
  <%
 	if (request.isUserInRole("ROLE_ADMIN")) {
@@ -56,8 +62,8 @@
 			
     		<c:otherwise>
     		
-    <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="loginpage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    <li><a href="${pageContext.request.contextPath}/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="${pageContext.request.contextPath}/loginpage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     
     		
     		</c:otherwise>

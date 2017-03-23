@@ -43,11 +43,11 @@
 <label for="text"><font color="white">User Password:</font></label>
 <input type="password" placeholder="Enter User Password"
 				name="Password" class="form-control" />   
-    <input type="checkbox" checked="checked"> <font color="white">Remember me</font>
+  <!--   <input type="checkbox" checked="checked"> <font color="white">Remember me</font> -->
     <br>
-    <button type="submit">Login</button>
-    <button type="button" class="cancelbtn">Cancel</button>
-    <a href="#">Forgot Password</a></span>
+    <button type="submit" class="btn btn-success btn-block">Login</button>
+   <!--  <button type="button" class="cancelbtn">Cancel</button> -->
+    <!-- <a href="#">Forgot Password</a></span> -->
 
 </div>
 </div>

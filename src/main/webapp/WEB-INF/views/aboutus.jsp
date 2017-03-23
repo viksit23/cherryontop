@@ -10,8 +10,9 @@
 </head>
 <body background="resources/images/nb1.jpg">
 <c:import url="/head"/>
+<div class="container">
 <h2><center><font face="Comic sans MS" color="crimson">We don't make cakes-We make dreams come true.</font></center> </h2>
-
+<hr>
 <ul><align="justify">
 <li>CherryOnTop.com-online gifting store bringing exclusive gift options, with a difference.</li>
 <li>CherryOnTop.com-is an online gifts shop that makes sending a gift to your dear ones a pleasure. When you think of gifting your loved ones, rosesandgifts.com takes care of your gifting need and makes sure that your beloved receive the best to make their day memorable.</li>
@@ -24,7 +25,7 @@ Through rosesandgifts.com, you can send various unique gifts like cakes, chocola
 <ul>
 <li>We offer best facilities and services to all our users for their convenience. We make gift giving easy and comfortable to all our users. We also offer different payment options to all our users for your convenience</li>
 <li>We offer Different modes of payment- Easy Online payment through Net Banking, Credit Cards, Debit Cards, Wallet Payments, etc. </li></ul>
-
+</div>
 </body>
 </html>
 </body>

@@ -32,4 +32,6 @@ http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 		<transition to="confirmOrder" on="ConfirmOrder" />
 	</view-state>
 	
+	<end-state id="confirmOrder" view="/WEB-INF/views/flows/page4.jsp"/>
+	
 	</flow>
