@@ -117,7 +117,7 @@
 
 
 
-<body ng-app="myApp" ng-controller="abc">
+<body background="resources/images/nb1.jpg"  ng-app="myApp" ng-controller="abc">
 <c:import url="/head"/>
 <div class="container">
 <a href="${flowExecutionUrl}&_eventId=BackToCart"

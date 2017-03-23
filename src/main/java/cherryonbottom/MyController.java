@@ -339,9 +339,45 @@ List<Product> list = pdao.getAllProducts();
 	@RequestMapping(value="/UpdateProductToDB" , method=RequestMethod.POST)
 	public String UpdateProductToDB( @ModelAttribute("Product") Product p ) {
 		
-		pdao.update(p);
+		try {
+			String path = context.getRealPath("/");
+
+			System.out.println(path);
+
+			File directory = null;
 
 		
+
+			if (p.getProductFile().getContentType().contains("image")) {
+				directory = new File(path + "\\resources\\images");
+
+				System.out.println(directory);
+
+				byte[] bytes = null;
+				File file = null;
+				bytes = p.getProductFile().getBytes();
+
+				if (!directory.exists())
+					directory.mkdirs();
+
+				file = new File(directory.getAbsolutePath() + System.getProperty("file.separator") + "image_"
+						+ p.getProductId() + ".jpg");
+
+				System.out.println(file.getAbsolutePath());
+
+				BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(file));
+				stream.write(bytes);
+				stream.close();
+
+			}
+
+			p.setpImage("resources/images/image_" + p.getProductId() + ".jpg");
+
+			pdao.update(p);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		return "redirect:/allproducts";
 	}
 	

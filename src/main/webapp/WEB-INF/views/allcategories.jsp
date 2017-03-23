@@ -20,7 +20,7 @@ myApp.controller("myCtrl",function($scope)
 		});
 
 </script>
-<body background="resources/images/cat2.jpg" ng-app="myApp" ng-controller="myCtrl">
+<body background="resources/images/nb3.jpg" ng-app="myApp" ng-controller="myCtrl">
 <c:import url="/head" />
 <div class="container">
 <div class="col-lg-12">

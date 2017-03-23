@@ -37,8 +37,7 @@
 			
 			</div><br>
 			
-			<img src="${pageContext.request.contextPath}/resources/images/${ProductId}.jpg" height=30px width=30px  onerror="this.src='${pageContext.request.contextPath}/resources/images/logo.png'" >
-		<br>
+			
 			<br>
 			
 			<div>${ProductDescription} </div><br>

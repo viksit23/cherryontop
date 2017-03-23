@@ -12,7 +12,7 @@
 <body>
 <c:import url="/head"/>
 
-	<form:form method="POST" action="${pageContext.request.contextPath}/UpdateProductToDB" modelAttribute="Product">
+	<form:form method="POST" action="${pageContext.request.contextPath}/UpdateProductToDB" modelAttribute="Product" enctype="multipart/form-data">
 <div class="container">
 		<div style="margin-bottom: 25px; margin-top: 25px" class="col-lg-12">
 			<form:select path="ProductCategory" class="form-control">
@@ -36,11 +36,21 @@
 			</div>
 
 
-<form:input type="text" path="Description" class="form-control"/>
-<form:input type="text" path="Price" class="form-control"/>
-<form:input type="text" path="ProductName" class="form-control"/>
-<form:input type="text" path="Quantity" class="form-control"/>
+<form:input type="text" path="Description" placeholder="Product Discription" class="form-control"/>
+<form:input type="text" path="Price" placeholder="Product Price" class="form-control"/>
+<form:input type="text" path="ProductName" placeholder="Product Name" class="form-control"/>
+<form:input type="text" path="Quantity" placeholder="Product Quantity" class="form-control"/>
 <form:input path="ProductId" type="hidden" />
+
+<label class="btn btn-default btn-file">
+			   Select Product Image <form:input path="ProductFile" type="file" style="display: none;" id="imageFile" 
+			   onchange="filePathDisp()" /> 
+			</label><br>
+			<span id =file_location>&nbsp</span>
+			<script type="text/javascript">
+					function filePathDisp() {
+							document.getElementById("file_location").innerHTML = $('#imageFile').val();}
+			</script>
 
 <br>
   <input type="submit" class="btn btn-success btn-block" value="Update"/>                    

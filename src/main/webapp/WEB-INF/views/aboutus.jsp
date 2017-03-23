@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>About Us</title>
 </head>
-<body background="resources/images/img.jpg">
+<body background="resources/images/nb1.jpg">
 <c:import url="/head"/>
 <h2><center><font face="Comic sans MS" color="crimson">We don't make cakes-We make dreams come true.</font></center> </h2>
 

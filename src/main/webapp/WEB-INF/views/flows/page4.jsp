@@ -44,7 +44,7 @@
 	}]); 
 	
 </script>
-<body ng-app="myApp" ng-controller="abc">
+<body background="resources/images/nb1.jpg"  ng-app="myApp" ng-controller="abc">
 <c:import url="/head"/>
 <div class="container-fluid">
 <div class="col-md-4 col-md-offset-4">

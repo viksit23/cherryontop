@@ -79,12 +79,12 @@
 
 
 
-<body ng-app="myApp" ng-controller="abc">
+<body background="resources/images/nb2.jpg"  ng-app="myApp" ng-controller="abc">
 <c:import url="/head"/>
 
 
 	<div class="container">
-		<a href="${pageContext.request.contextPath}/allProducts"
+		<a href="${pageContext.request.contextPath}/allproducts"
 			class="btn btn-danger btn pull-left">BACK TO PRODUCTS</a>
 
 

@@ -44,6 +44,7 @@ import cherryonbottom.product.ProductDAO;
 import cherryonbottom.user.User;
 import cherryonbottom.user.UserDAO;
 
+
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 	
@@ -79,19 +80,27 @@ public class RestController {
 			{
 				if( c.getUserName().equals(username) )
 				{
-					JSONObject jobj = new JSONObject();
+					try
+					{
+						JSONObject jobj = new JSONObject();
+						
+						jobj.put("ProductName", c.getName());
+						jobj.put("ProductPrice", c.getPrice());
+						jobj.put("ProductQty", c.getQty());
+						
+						Product p = pdao.getProduct(Integer.parseInt(c.getProductID()));
+						
+						jobj.put("ProductId", p.getProductId());
+						jobj.put("ProductImage", p.getpImage());
+						jobj.put("CartId", c.getID());
+						
+						jarr.add(jobj);
+					}
+					catch( Exception e )
+					{
+						e.printStackTrace();
+					}
 					
-					jobj.put("ProductName", c.getName());
-					jobj.put("ProductPrice", c.getPrice());
-					jobj.put("ProductQty", c.getQty());
-					
-					Product p = pdao.getProduct(Integer.parseInt(c.getProductID()));
-					
-					jobj.put("ProductId", p.getProductId());
-					jobj.put("ProductImage", p.getpImage());
-					jobj.put("CartId", c.getID());
-					
-					jarr.add(jobj);
 				}
 			}
 		}
@@ -171,18 +180,27 @@ public class RestController {
 		for (Cart item : list) {
 
 			if (item.getUserName().equals(user)) {
-				JSONObject jobj = new JSONObject();
 
-				jobj.put("ProductID", item.getProductID());
-				jobj.put("ProductName", item.getName());
-				jobj.put("ProductPrice", item.getPrice());
-				Product p = pdao.getProduct(Integer.parseInt(item.getProductID()));
+				try
+				{
+					JSONObject jobj = new JSONObject();
 
-				jobj.put("ProductImage", p.getpImage());
-				jobj.put("ProductQty", item.getQty());
-				jobj.put("CartId", item.getID());
+					jobj.put("ProductID", item.getProductID());
+					jobj.put("ProductName", item.getName());
+					jobj.put("ProductPrice", item.getPrice());
+					Product p = pdao.getProduct(Integer.parseInt(item.getProductID()));
 
-				jarr.add(jobj);
+					jobj.put("ProductImage", p.getpImage());
+					jobj.put("ProductQty", item.getQty());
+					jobj.put("CartId", item.getID());
+
+					jarr.add(jobj);
+				}
+				catch( Exception e )
+				{
+					e.printStackTrace();
+				}
+				
 			}
 
 		}
@@ -313,6 +331,8 @@ public class RestController {
 		for (Cart item : list) {
 
 			if (item.getUserName().equals(user)) {
+				try
+				{
 				JSONObject jobj = new JSONObject();
 
 				jobj.put("ProductID", item.getProductID());
@@ -337,15 +357,21 @@ public class RestController {
 
 				jarr.add(jobj);
 			}
+			
+			catch( Exception e )
+			{
+				e.printStackTrace();
+			}
 
 		}
-
+		}
 		System.out.println(jarr);
 
 		return new ResponseEntity<String>(jarr.toString(), HttpStatus.CREATED);
 	}
 	
-}
+	}
+
 
 	
 	
